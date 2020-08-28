@@ -1,0 +1,10 @@
+{
+  "name": "influx_metrics",
+  "version": "0.0.1",
+  "title": "Metrics to influx/Grafana",
+  "author": "Sovigod",
+  "description": "Export metrics from your factorio game in influx format. Watch in Grafana",
+  "homepage": "",
+  "dependencies": ["base >= 1.0.0"],
+  "factorio_version": "1.0"
+}
