@@ -2,7 +2,6 @@ local filename = "zzzmetrics.stat"
 
 script.on_event(defines.events.on_tick, function(event)
     if event.tick % 600 == 0 then
-        game.print("Start write stats to "..filename)
         game.write_file(filename, "factorio tick=" .. game.tick .. '\n', false, 0)
         for _, player in pairs(game.players) do
             game.write_file(filename, "factorio_players,name="..player.name..",online="..tostring(player.connected).." online_time="..player.online_time.."\n", true, 0)
