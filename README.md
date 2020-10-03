@@ -1,16 +1,10 @@
-# File Input Plugin
+This can be used for factorio running on a server. It will always export it to `{factorio-path}/script-output/zzzmetrics.stat`
+If directory `script-output` not exist - you need to create it.
 
-The file plugin parses the **complete** contents of a file **every interval** using
-the selected [input data format][].
-
-**Note:** If you wish to parse only newly appended lines use the [tail][] input
-plugin instead.
-
-### Configuration:
+For parsing metrics you can use [telegraf](https://github.com/influxdata/telegraf/releases). Just add to `/etc/telegraf.conf` something like this:
 
 ```toml
 [[inputs.file]]
   files = ["/path/to/factorio/script-output/zzzmetrics.stat"]
   data_format = "influx"
 ```
-
